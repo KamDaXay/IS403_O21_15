@@ -6,12 +6,12 @@ if [ ! -d "./logs/LongForecasting" ]; then
     mkdir ./logs/LongForecasting
 fi
 seq_len=336
-model_name=BNB_PatchTST
+model_name=PatchTST
 
 root_path_name=./dataset/
-data_path_name=BNB2019-2024.csv
-model_id_name=BNB2019-2024
-data_name=BNB2019-2024
+data_path_name=BNB2019_2024.csv
+model_id_name=BNB2019_2024
+data_name=custom
 
 random_seed=2021
 for pred_len in 30 60 90
@@ -24,7 +24,9 @@ do
       --model_id $model_id_name_$seq_len'_'$pred_len \
       --model $model_name \
       --data $data_name \
-      --features M \
+      --features MS \
+      --target 'Close' \
+      --freq 'd' \
       --seq_len $seq_len \
       --pred_len $pred_len \
       --enc_in 7 \

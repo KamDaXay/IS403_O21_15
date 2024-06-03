@@ -1,0 +1,15 @@
+336_96_PatchTST_custom_ftM_sl336_ll48_pl96_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.15188011527061462, mae:0.20037510991096497, rse:0.5134055018424988
+
+336_192_PatchTST_custom_ftM_sl336_ll48_pl192_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.19662466645240784, mae:0.2428351193666458, rse:0.5833575129508972
+
+336_30_PatchTST_custom_ftMS_sl336_ll48_pl30_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.07805262506008148, mae:0.22338064014911652, rse:0.8466598987579346
+
+336_60_PatchTST_custom_ftMS_sl336_ll48_pl60_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.07557673752307892, mae:0.21816447377204895, rse:1.275826334953308
+
+336_90_PatchTST_custom_ftMS_sl336_ll48_pl90_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0  
+mse:0.10908151417970657, mae:0.2607005536556244, rse:1.220768928527832
+
