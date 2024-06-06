@@ -29,7 +29,7 @@ do
       --freq 'd' \
       --seq_len $seq_len \
       --pred_len $pred_len \
-      --enc_in 7 \
+      --enc_in 5 \
       --e_layers 3 \
       --n_heads 16 \
       --d_model 128 \
@@ -41,8 +41,7 @@ do
       --stride 8\
       --des 'Exp' \
       --train_epochs 100\
-      --patience 20\
-      --lradj 'TST'\
+      --patience 10\
       --pct_start 0.4 \
       --itr 1 --batch_size 128 --learning_rate 0.0001 >logs/LongForecasting/$model_name'_'$model_id_name'_'$seq_len'_'$pred_len.log 
 done

@@ -162,10 +162,9 @@ Mô hình ARIMA (Autoregressive Integrated Moving Average) là một phương ph
 Mô hình ARIMA là sự kết hợp của 3 thành phần chính: AR (thành phần tự hồi quy); I (tính dừng của chuỗi thời gian); MA (thành phần dự báo trung bình trượt).
 
 Công thức của mô hình ARIMA (p,d,q) có dạng sau:
-\begin{equation}
-y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + ... + \phi_{p}y_{t-p} + \theta_{1}\epsilon_{t-1} + \theta_{2}\epsilon_{t-2} + ... + \theta_{q}\epsilon_{t-q}    
-\end{equation}
-
+\[
+y_{t} = c + \phi_{1}y_{t-1} + \phi_{2}y_{t-2} + ... + \phi_{p}y_{t-p} + \theta_{1}\epsilon_{t-1} + \theta_{2}\epsilon_{t-2} + ... + \theta_{q}\epsilon_{t-q}
+\]
 Trong đó:
 \begin{itemize}
     \item \(y_{t}\) là giá trị của chuỗi thời gian tại thời điểm t.
@@ -182,13 +181,13 @@ Hồi quy tuyến tính (Linear regression) là một phương pháp phân tích
 Công thức của mô hình Linear Regression (hồi quy tuyến tính) có dạng như sau:
 \begin{itemize}
     \item Đối với hồi quy đơn biến: 
-    \begin{equation}
- Y = \beta_{0}+ \beta_{1}X
-    \end{equation}
+    \[
+ Y = \beta_{0}+ \beta_{1}X   
+    \] 
     \item Đối với hồi quy đa biến: 
-    \begin{equation}
-  Y = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + ... + \beta_{p}X_{p}      
-    \end{equation}  
+    \[
+    Y = \beta_{0} + \beta_{1}X_{1} + \beta_{2}X_{2} + ... + \beta_{p}X_{p}
+    \] 
 \end{itemize}
 Trong đó:
 \begin{itemize}
@@ -204,32 +203,31 @@ Mô hình Holt-Winters là một mô hình dự báo chuỗi thời gian bằng 
 Mô hình Holt-Winters được chia thành hai loại: Additive Holt-Winters (AH-W) và Multiplicative Holt-Winters (MH-W)
 
 Đối với phương pháp Multiplicative:
-\begin{equation}
-A_{t} = \alpha\frac{y_{t}}{s_{t-m}} + (1 - \alpha)(A_{t-1} + B_{t-1})    
-\end{equation}
-\begin{equation}
-B_{t} = \beta(A_{t} - A_{t-1}) + (1 - \beta) B_{t-1}    
-\end{equation}
-\begin{equation}
-X_{t} = \gamma\frac{y_{t}}{(l_{t})} + (1 - \gamma) X_{t-m}    
-\end{equation}
-\begin{equation}
-F_{t+m} = (A_{t} + B_{t+m}) X_{t-s+m}    
-\end{equation}
-Đối với phương pháp Additive:
-\begin{equation}
-A_{t} = \alpha(y_{t} - X_{t-m}) + (1 - \alpha)(A_{t-1} + B_{t-1})
-\end{equation}
-\begin{equation}
+\[
+A_{t} = \alpha\frac{y_{t}}{s_{t-m}} + (1 - \alpha)(A_{t-1} + B_{t-1}) 
+\]
+\[
 B_{t} = \beta(A_{t} - A_{t-1}) + (1 - \beta) B_{t-1}   
-\end{equation}
-\begin{equation}
-X_{t} = \gamma(y_{t} - A_{t-1} - B_{t-1}) + (1 - \gamma) X_{t-m}    
-\end{equation}   
-\begin{equation}
+\]
+\[
+X_{t} = \gamma\frac{y_{t}}{(l_{t})} + (1 - \gamma) X_{t-m} 
+\]
+\[
 F_{t+m} = (A_{t} + B_{t+m}) X_{t-s+m}    
-\end{equation}
-
+\]
+Đối với phương pháp Additive:
+\[
+A_{t} = \alpha(y_{t} - X_{t-m}) + (1 - \alpha)(A_{t-1} + B_{t-1})
+\]
+\[
+B_{t} = \beta(A_{t} - A_{t-1}) + (1 - \beta) B_{t-1}   
+\]
+\[
+X_{t} = \gamma(y_{t} - A_{t-1} - B_{t-1}) + (1 - \gamma) X_{t-m}    
+\]
+\[
+F_{t+m} = (A_{t} + B_{t+m}) X_{t-s+m}    
+\]
 Trong đó:
 \begin{itemize}
     \item \(y_{t}\) là dữ liệu theo thời gian t.
@@ -243,11 +241,10 @@ Với \(0 \leq \gamma \leq 1-\alpha\)
 
 \subsection{Gradient Boosting regression}
 Gradient Boosting là một thuật toán máy học được sử dụng để giải quyết các bài toán hồi quy, trong đó các mô hình yếu được xây dựng tuần tự, mỗi mô hình cố gắng sửa lỗi của mô hình trước đó. 
-
 Giả sử chúng ta có $M$ mô hình, dự đoán của mô hình Gradient Boosting có thể được biểu diễn như sau:
-\begin{equation}
+\[
 F_M(x) = F_{M-1}(x) + \alpha \cdot h_M(x)
-\end{equation}
+\]
 Trong đó:
 \begin{itemize}
     \item $F_M(x)$ là dự đoán cuối cùng sau $M$ lần lặp.
@@ -355,7 +352,8 @@ Các công thức để tính các thành phần khác nhau của LightGBM như 
 \text{Hàm mất mát:} \quad & L(y, \hat{y}) = \sum_{i=1}^{n} \text{loss}(y_i, \hat{y}_i) \\
 \text{Gradient:} \quad & g_i = \frac{\partial L(y_i, \hat{y}_i)}{\partial \hat{y}_i} \\
 \text{Hessian:} \quad & h_i = \frac{\partial^2 L(y_i, \hat{y}_i)}{\partial \hat{y}_i^2} \\
-\text{Giá trị phân chia tốt nhất:} \quad & \text{Split\_value} = \arg\min_{s} \left[ \frac{(\sum_{i \in I_L} g_i)^2}{\sum_{i \in I_L} h_i + \lambda} + \frac{(\sum_{i \in I_R} g_i)^2}{\sum_{i \in I_R} h_i + \lambda} \right]
+\text{Giá trị phân chia tốt nhất:} 
+\quad & \text{Split\_value} = \arg\min_{s} \left[ \frac{(\sum_{i \in I_L} g_i)^2}{\sum_{i \in I_L} h_i + \lambda} + \frac{(\sum_{i \in I_R} g_i)^2}{\sum_{i \in I_R} h_i + \lambda} \right]
 \end{align*}
 
 Trong các công thức này, $y$ đại diện cho nhãn thực tế, $\hat{y}$ đại diện cho dự đoán của mô hình, $g_i$ là gradient, $h_i$ là Hessian, $I_L$ và $I_R$ lần lượt là các chỉ số của các mẫu trong nút trái và phải, và $\lambda$ là tham số điều chỉnh.
@@ -371,6 +369,115 @@ Các phương pháp truyền thống gặp khó khăn trong việc dự báo dà
 Hình (a): Dữ liệu chuỗi thời gian đa biến được chia thành các kênh khác nhau. Chúng cùng chia sẻ một backbone Transformer, nhưng các quá trình hướng tới (forward processes) là độc lập.
 Hình (b): Mỗi kênh đơn biến được truyền qua toán tử chuẩn hóa theo từng cá thể (instance normalization) và được chia thành các bản vá. Các bản vá này được sử dụng làm token đầu vào của Transformer.
 Hình (c): Học biểu diễn tự giám sát có mặt nạ với PatchTST, trong đó các bản vá được chọn ngẫu nhiên và đặt thành bằng không. Mô hình sẽ tái tạo các bản vá bị che khuất.
+
+\subsection{Gated Recurrent Unit}
+
+\section{RESULTS}
+\subsection{GRU}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BTC_GRU_82.jpg}
+    \caption{Kết quả dự đoán giá Bitcoin của GRU với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BTC_GRU_73.jpg}
+    \caption{Kết quả dự đoán giá Bitcoin của GRU với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BTC_GRU_64.jpg}
+    \caption{Kết quả dự đoán giá Bitcoin của GRU với tỉ lệ train-test 6:4.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BNB_GRU_82.jpg}
+    \caption{Kết quả dự đoán giá Binance của GRU với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BNB_GRU_73.jpg}
+    \caption{Kết quả dự đoán giá Binance của GRU với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/BNB_GRU_64.jpg}
+    \caption{Kết quả dự đoán giá Binance của GRU với tỉ lệ train-test 6:4.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/ETH_GRU_82.jpg}
+    \caption{Kết quả dự đoán giá Ethereum của GRU với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/ETH_GRU_73.jpg}
+    \caption{Kết quả dự đoán giá Ethereum của GRU với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/ETH_GRU_64.jpg}
+    \caption{Kết quả dự đoán giá Ethereum của GRU với tỉ lệ train-test 6:4.}
+\end{figure}
+
+
+\subsection{LSTM}
+
+\subsection{LightGBM}
+
+\subsection{RNN}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbtc8_2.png}
+    \caption{Kết quả dự đoán giá Bitcoin của RNN với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbtc7_3.png}
+    \caption{Kết quả dự đoán giá Bitcoin của RNN với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbtc6_4.png}
+    \caption{Kết quả dự đoán giá Bitcoin của RNN với tỉ lệ train-test 6:4.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbnb8_2.png}
+    \caption{Kết quả dự đoán giá Binance của RNN với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbnb7_3.png}
+    \caption{Kết quả dự đoán giá Binance của RNN với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNbnb6_4.png}
+    \caption{Kết quả dự đoán giá Binance của RNN với tỉ lệ train-test 6:4.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNeth8_2.png}
+    \caption{Kết quả dự đoán giá Ethereum của RNN với tỉ lệ train-test 8:2.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNeth7_3.png}
+    \caption{Kết quả dự đoán giá Ethereum của RNN với tỉ lệ train-test 7:3.}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/RNNeth6_4.png}
+    \caption{Kết quả dự đoán giá Ethereum của RNN với tỉ lệ train-test 6:4.}
+\end{figure}
+
+\subsection{PatchTST}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{bibliography/pictures/PatchTST_BTC_7-3.png}
+    \caption{Kết quả dự đoán giá Bitcoin của PatchTST với tỉ lệ train-test 7:3.}
+\end{figure}
 
 \begin{thebibliography}{00}
 \bibitem{b1} Nakamoto, S. Bitcoin: A Peer-to-Peer Electronic Cash System. Technical Report. Available online: https://bitcoin.org/bitcoin.pdf.
