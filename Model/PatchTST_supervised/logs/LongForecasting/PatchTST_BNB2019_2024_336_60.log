@@ -1,0 +1,60 @@
+Args in experiment:
+Namespace(random_seed=2021, is_training=1, model_id='336_60', model='PatchTST', data='custom', root_path='./dataset/', data_path='BNB2019_2024.csv', features='MS', target='Close', freq='d', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=60, fc_dropout=0.2, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=7, dec_in=7, c_out=7, d_model=128, n_heads=16, e_layers=3, d_layers=1, d_ff=256, moving_avg=25, factor=1, distil=True, dropout=0.2, embed='timeF', activation='gelu', output_attention=False, do_predict=False, num_workers=10, itr=1, train_epochs=100, batch_size=128, patience=20, learning_rate=0.0001, des='Exp', loss='mse', lradj='TST', pct_start=0.4, use_amp=False, use_gpu=True, gpu=0, use_multi_gpu=False, devices='0,1,2,3', test_flop=False)
+Use GPU: cuda:0
+>>>>>>>start training : 336_60_PatchTST_custom_ftMS_sl336_ll48_pl60_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 875
+val 123
+test 304
+Epoch: 1 cost time: 28.750075578689575
+Epoch: 1, Steps: 6 | Train Loss: 0.8647301 Vali Loss: nan Test Loss: 0.0640943
+Validation loss decreased (inf --> nan).  Saving model ...
+Updating learning rate to 4.149208153775985e-06
+Epoch: 2 cost time: 28.801059246063232
+Epoch: 2, Steps: 6 | Train Loss: 0.8269922 Vali Loss: nan Test Loss: 0.0639195
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 4.595904987055895e-06
+Epoch: 3 cost time: 27.814669132232666
+Epoch: 3, Steps: 6 | Train Loss: 0.7836190 Vali Loss: nan Test Loss: 0.0636549
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 5.337313382765071e-06
+Epoch: 4 cost time: 29.01439905166626
+Epoch: 4, Steps: 6 | Train Loss: 0.7537318 Vali Loss: nan Test Loss: 0.0632535
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 6.368824000156984e-06
+Epoch: 5 cost time: 28.24756932258606
+Epoch: 5, Steps: 6 | Train Loss: 0.7138870 Vali Loss: nan Test Loss: 0.0626750
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 7.684023931114024e-06
+Epoch: 6 cost time: 33.9084050655365
+Epoch: 6, Steps: 6 | Train Loss: 0.6416100 Vali Loss: nan Test Loss: 0.0619749
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 9.274736569238537e-06
+Epoch: 7 cost time: 30.459959983825684
+Epoch: 7, Steps: 6 | Train Loss: 0.6385911 Vali Loss: nan Test Loss: 0.0612251
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.113107244386708e-05
+Epoch: 8 cost time: 29.302222967147827
+Epoch: 8, Steps: 6 | Train Loss: 0.5752644 Vali Loss: nan Test Loss: 0.0604814
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.3241490702972915e-05
+Epoch: 9 cost time: 31.13424015045166
+Epoch: 9, Steps: 6 | Train Loss: 0.5447156 Vali Loss: nan Test Loss: 0.0597217
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.5592870862717032e-05
+Epoch: 10 cost time: 29.701034784317017
+Epoch: 10, Steps: 6 | Train Loss: 0.5019304 Vali Loss: nan Test Loss: 0.0588346
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 1.8170594377580232e-05
+Epoch: 11 cost time: 30.230032444000244
+Epoch: 11, Steps: 6 | Train Loss: 0.4609812 Vali Loss: nan Test Loss: 0.0576527
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 2.095863552395426e-05
+Epoch: 12 cost time: 31.271516799926758
+Epoch: 12, Steps: 6 | Train Loss: 0.4349030 Vali Loss: nan Test Loss: 0.0558567
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 2.3939661032168215e-05
+Epoch: 13 cost time: 32.065775871276855
+Epoch: 13, Steps: 6 | Train Loss: 0.4184379 Vali Loss: nan Test Loss: 0.0531756
+Validation loss decreased (nan --> nan).  Saving model ...
+Updating learning rate to 2.7095137847537134e-05
+Epoch: 14 cost time: 30.562713146209717
