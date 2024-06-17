@@ -17,6 +17,8 @@ random_seed=2021
 for pred_len in 30 60 90
 do
     python -u run_longExp.py \
+      --use_gpu False \
+      --do_predict \
       --random_seed $random_seed \
       --is_training 1 \
       --root_path $root_path_name \
