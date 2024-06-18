@@ -14,14 +14,16 @@ model_id_name=ETH2019_2024
 data_name=custom
 
 random_seed=2021
-for pred_len in 30 60 90
+for pred_len in 31
 do
     python -u run_longExp.py \
+      --use_gpu 0 \
+      --do_predict \
       --random_seed $random_seed \
       --is_training 1 \
       --root_path $root_path_name \
       --data_path $data_path_name \
-      --model_id $model_id_name_$seq_len'_'$pred_len \
+      --model_id $model_id_name'_'$seq_len'_'$pred_len \
       --model $model_name \
       --data $data_name \
       --features MS \
@@ -40,7 +42,7 @@ do
       --patch_len 16\
       --stride 8\
       --des 'Exp' \
-      --train_epochs 100\
+      --train_epochs 1\
       --patience 20\
       --lradj 'TST'\
       --pct_start 0.4 \
