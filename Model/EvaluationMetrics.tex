@@ -1,0 +1,13 @@
+\subsection{Evaluation Metrics} 
+\subsubsection{Mean Squared Error (MSE)} là trung bình của bình phương các sai số, tức là sự khác biệt giữa các ước lượng và những gì được đánh giá. Giá trị MSE càng thấp, tức là sự khác biệt giữa giá trị dự báo và giá trị thực tế càng nhỏ thì mô hình dự báo càng tốt. Công thức tính MSE như sau:
+\[
+\text{MSE} = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
+\]
+\subsubsection{Root Mean Square Error (RMSE)} đo lường sai số trung bình của mô hình so với dữ liệu thực tế. RMSE được tính bằng căn bậc hai của trung bình bình phương của sai số giữa giá trị dự đoán và giá trị thực tế. Giá trị RMSE càng nhỏ thì mô hình càng tốt. Công thức tính RMSE như sau:
+\[
+\text{RMSE} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
+\]
+\subsubsection{Mean Absolute Percentage Error (MAPE)} đo lường tỉ lệ phần trăm trung bình của sai số giữa giá trị dự đoán và giá trị thực tế. MAPE được tính bằng trung bình giá trị tuyệt đối của sai số chia cho giá trị thực tế, nhân với 100. Giá trị MAPE càng nhỏ thì mô hình càng tốt. Công thức tính MAPE như sau:
+\[
+\text{MAPE} = \frac{1}{n} \sum_{i=1}^{n} \left| \frac{y_i - \hat{y}_i}{y_i} \right| \times 100
+\]
