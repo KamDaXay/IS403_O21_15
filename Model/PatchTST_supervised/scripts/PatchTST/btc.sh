@@ -9,19 +9,21 @@ seq_len=336
 model_name=PatchTST
 
 root_path_name=./dataset/
-data_path_name=BTC.csv
-model_id_name=BTC
+data_path_name=BTC2019_2024.csv
+model_id_name=BTC2019_2024
 data_name=custom
 
 random_seed=2021
 for pred_len in 30 60 90
 do
     python -u run_longExp.py \
+      --use_gpu True \
+      --do_predict \
       --random_seed $random_seed \
       --is_training 1 \
       --root_path $root_path_name \
       --data_path $data_path_name \
-      --model_id $model_id_name_$seq_len'_'$pred_len \
+      --model_id $model_id_name'_'$seq_len'_'$pred_len \
       --model $model_name \
       --data $data_name \
       --features MS \

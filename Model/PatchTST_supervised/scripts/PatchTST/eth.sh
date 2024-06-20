@@ -10,14 +10,14 @@ model_name=PatchTST
 
 root_path_name=./dataset/
 data_path_name=ETH2019_2024.csv
-model_id_name=ETH2019_2024
+model_id_name=ETH2019_2024_73
 data_name=custom
 
 random_seed=2021
-for pred_len in 31
+for pred_len in 60 90
 do
     python -u run_longExp.py \
-      --use_gpu 0 \
+      --use_gpu True \
       --do_predict \
       --random_seed $random_seed \
       --is_training 1 \
@@ -42,7 +42,7 @@ do
       --patch_len 16\
       --stride 8\
       --des 'Exp' \
-      --train_epochs 1\
+      --train_epochs 100\
       --patience 20\
       --lradj 'TST'\
       --pct_start 0.4 \
