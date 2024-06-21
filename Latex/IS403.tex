@@ -18,8 +18,7 @@
 \usepackage{latexsym}
 \usepackage{multirow}
 \usepackage{tabularx}
-\usepackage{geometry}
-\usepackage{lipsum}
+
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     
@@ -57,6 +56,9 @@ TP. Hồ Chí Minh, Việt Nam \\
 \textit{Đại Học Công Nghê Thông Tin}\\
 TP. Hồ Chí Minh, Việt Nam  \\
 21520191@gm.uit.edu.vn} 
+
+
+
 }
 
 \maketitle
@@ -588,12 +590,11 @@ GRU hoạt động theo các bước sau:
     \includegraphics[width=0.5\textwidth]{bibliography/pictures/HWeth.png}
     \caption{Kết quả dự đoán giá Ethereum của Holt-Winters.}
 \end{figure}
-\clearpage
 \subsection{Result} 
 \begin{table}[H]
 \centering
 \small
-\setlength{\tabcolsep}{0.5pt} 
+\setlength{\tabcolsep}{0.25pt} 
 \begin{tabular}{|l|c||c||c||c||c||c||c||c||c||c|}
 \hline
 & & \multicolumn{3}{c|}{\textbf{BTC}} & \multicolumn{3}{c|}{\textbf{BNB}} & \multicolumn{3}{c|}{\textbf{ETH}} \\
@@ -643,7 +644,7 @@ PatchTST & 8:2 & 28742.968 & 24872.653 & 1.798 & 226.754 & 201.147 & 0.512 & 168
 \end{tabular}
 \caption{Kết quả chỉ số đánh giá RMSE, MAPE và MSE trên ba Dataset}
 \end{table}    
-
+\clearpage
 \section{Conclusion}
 Từ kết quả so sánh của Bảng II, dựa vào độ đo RMSE, MAPE và MSE, có thể thấy mô hình Gradient Boosting có kết quả tốt nhất trong các mô hình trên cả 3 dataset. Kết quả nghiên cứu này cho thấy thuật toán Gradient Boosting là phù hợp nhất trong việc dự đoán giá tiền ảo trong tương lai của 3 loại tiền ảo Bitcoin, Binance và Ethereum. Nghiên cứu này nhấn mạnh sự cần thiết của việc sử dụng nhiều phương pháp mô hình hóa trong phân tích tài chính. Do đó, nhóm đã xem xét trên 3 độ đo và kết luận rằng mô hình Gradient Boosting là lựa chọn tốt nhất nhằm dự báo giá 30 ngày tiếp theo của cả ba loại tiền ảo.
 \section*{Acknowledgment}
@@ -651,7 +652,7 @@ Với lòng biết ơn sâu sắc nhất, nhóm xin gửi lời cảm ơn chân 
 
 
 % Add vertical space before the bibliography
-\clearpage
+
 \begin{thebibliography}{00}
 \bibitem{b1} Nakamoto, S. Bitcoin: A Peer-to-Peer Electronic Cash System. Technical Report. Available online: https://bitcoin.org/bitcoin.pdf.
 \bibitem{b2} F. Reid and M. Harrigan, “An Analysis of Anonymity in the Bitcoin System,” Tech. Rep., 2011.[Online]. Available: http://arxiv.org/abs/1107.4524.
