@@ -1,0 +1,20 @@
+Args in experiment:
+Namespace(random_seed=2021, is_training=1, model_id='ETH2019_2024_336_30', model='PatchTST', data='custom', root_path='./dataset/', data_path='ETH2019_2024.csv', features='MS', target='Close', freq='d', checkpoints='./checkpoints/', seq_len=336, label_len=48, pred_len=30, fc_dropout=0.2, head_dropout=0.0, patch_len=16, stride=8, padding_patch='end', revin=1, affine=0, subtract_last=0, decomposition=0, kernel_size=25, individual=0, embed_type=0, enc_in=5, dec_in=7, c_out=7, d_model=128, n_heads=16, e_layers=3, d_layers=1, d_ff=256, moving_avg=25, factor=1, distil=True, dropout=0.2, embed='timeF', activation='gelu', output_attention=False, do_predict=True, num_workers=10, itr=1, train_epochs=1, batch_size=128, patience=20, learning_rate=0.0001, des='Exp', loss='mse', lradj='TST', pct_start=0.4, use_amp=False, use_gpu=False, gpu=0, use_multi_gpu=False, devices='0,1,2,3', test_flop=False)
+Use CPU
+>>>>>>>start training : ETH2019_2024_336_30_PatchTST_custom_ftMS_sl336_ll48_pl30_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0>>>>>>>>>>>>>>>>>>>>>>>>>>
+train 905
+val 153
+test 334
+Epoch: 1 cost time: 58.459704875946045
+Epoch: 1, Steps: 7 | Train Loss: 0.5905764 Vali Loss: 0.2057261 Test Loss: 0.0324956
+Validation loss decreased (inf --> 0.205726).  Saving model ...
+Updating learning rate to 1.3347753018883054e-05
+>>>>>>>testing : ETH2019_2024_336_30_PatchTST_custom_ftMS_sl336_ll48_pl30_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+test 334
+rmse: 0.18026547133922577, mse:0.032495640218257904, mape: 0.48590582609176636, mae:0.15094532072544098, rse:1.8225477933883667, mspe: 0.3385196030139923, corr: [-0.0579967  -0.02033607  0.00179821 -0.01437067 -0.03366274 -0.0318206
+ -0.01292059 -0.04888185  0.01599762 -0.0520561  -0.02338238 -0.05687786
+ -0.00741473 -0.03178759 -0.0473856  -0.00707529 -0.01953701 -0.03651331
+ -0.05315481 -0.06848365 -0.0403993  -0.04151713 -0.07062038 -0.06551206
+ -0.03853876 -0.06882015 -0.06927726 -0.06853496 -0.05780309 -0.0546453 ]
+>>>>>>>predicting : ETH2019_2024_336_30_PatchTST_custom_ftMS_sl336_ll48_pl30_dm128_nh16_el3_dl1_df256_fc1_ebtimeF_dtTrue_Exp_0<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+pred 1
