@@ -1,0 +1,24 @@
+\subsection{Holt-Winters}
+Mô hình Holt-Winters là một mô hình dự báo chuỗi thời gian bằng cách sử dụng exponential smoothing. Mô hình này chú trọng đến ba thành phần của một chuỗi thời gian: mức độ (level), xu hướng (trend) và tính thời vụ (seasonality), đồng thời sử dụng chúng để đưa ra các dự báo trong tương lai.
+Mô hình Holt-Winters được chia thành hai loại: Additive Holt-Winters (AH-W) và Multiplicative Holt-Winters (MH-W)
+
+\[
+l_{t} = (1 - \alpha)l_{t - 1} + \alpha x_{t}
+\]
+\[
+b_{t} = (1 - \beta)b_{t - 1} + \beta (l_{t} - l_{t - 1})
+\]
+\[
+c_{t} = (1 - \gamma)c_{t - L} + \gamma (x_{t} - l_{t - 1} - b_{t - 1})
+\]
+\[
+y_{t} = (l_{t} + b_{t})c_{t}
+\]
+
+Trong đó:
+\begin{itemize}
+    \item \(\alpha\) là hệ số làm mịn theo mức độ (level).
+    \item \(\beta\) là hệ số làm mịn theo xu hướng (trend).
+    \item \(\gamma\) là hệ số làm mịn theo mùa (season).
+\end{itemize}
+Với \(0 \leq \gamma \leq 1-\alpha\)
