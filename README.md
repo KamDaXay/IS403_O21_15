@@ -4,7 +4,7 @@
 This repository contains the code and resources for a class project on Combining Machine Learning and Deep Learning for Real-Time Cryptocurrency Price Prediction. The project explores the performance of Linear Regression, ARIMA, Recurrent Neural Networks (RNN), Gated Recurrent Units (GRU), Long Short-Term Memory (LSTM) networks, Holt-Winters, Gradient Boosting Regression, Bagging Model, PatchTST, and LightGBM in forecasting the prices of Bitcoin, Ethereum, and Binance.
 
 ## Dataset
-The dataset used in this project is collected from �, containing daily data for Bitcoin, Ethereum, and Dogecoin from 01/03/2019 to 17/02/2024. The dataset includes features such as Date, Open, High, Low, Close, Adj Close, Volume.
+The dataset used in this project is collected from kaggle.com, containing daily data for Bitcoin, Ethereum, and Binance from 01/03/2019 to 17/02/2024. The dataset includes features such as Date, Open, High, Low, Close, Adj Close, Volume.
 
 ## Feature Engineering
 To improve the predictive performance of the models, the project incorporates technical indicators as features. These indicators, such as moving averages and momentum indicators, provide insights into market sentiment and trends, aiding in the prediction of price movements.
@@ -29,9 +29,9 @@ The models are evaluated using various performance metrics, such as Root Mean Sq
 ## Division of Work
 | Member | Responsibilities |
 | --- | --- |
-| Le Tuan Dat | Implemented GRU and Gradient Boosting Regression models. Contributed to project documentation.|
+| Le Tuan Dat | Implemented GRU and Gradient Boosting Regression models. Contributed to researching dataset, project documentation.|
 | Tran Xuan Bang | Implemented Linear Regression and Bagging models. Contributed to researching related work and project documentation.|
-| Hoang Gia Loc | Implemented ARIMA and PatchTST models. Contributed to project documentation.|
+| Hoang Gia Loc | Implemented ARIMA and PatchTST models. Contributed to analyzing dataset, project documentation.|
 | Vo Hong Kim Anh | Implemented LSTM and LightGBM models. Contributed to researching related work and project documentation.|
 | Vu Thanh Doan | Implemented RNN and Holt-Winters models. Contributed to project documentation.|
 
